@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <div class="header">
-            <a href="javascript:;"></a>
+            <a href="javascript:;" @click="ret"></a>
             <a href="javascript:;"></a>
         </div>
         <div class="aui-account-title">
@@ -62,6 +62,9 @@
             }
         },
         methods:{
+            ret(){
+                this.$router.push("/Home");
+            },
             login(){
                 var u=this.uname;
                 var p=this.upwd;

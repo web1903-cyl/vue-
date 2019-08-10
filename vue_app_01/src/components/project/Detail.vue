@@ -1,6 +1,6 @@
 <template>
     <div class="detail">
-        <div class="return">
+        <div class="return" @click="tohome">
             <img src="../../assets/l1.png">
         </div>
         <div class="product">
@@ -39,6 +39,11 @@
     export default{
         data(){
             return{}
+        },
+        methods:{
+            tohome(){
+                this.$router.push("/Home");
+            }
         }
     }
 </script>

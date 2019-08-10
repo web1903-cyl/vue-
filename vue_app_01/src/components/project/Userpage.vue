@@ -8,8 +8,8 @@
         </div>
         <div class="title">
         <table></table>
-            <img src="../../assets/user/my-photo1.jpg" alt="">
-            <p>账号登录</p>
+            <img src="../../assets/user/my-photo1.jpg" @click="ret">
+            <p @click="ret">账号登录</p>
             <p>超级会员    积分:5190  </p>
         </div>
         <div class="sub">
@@ -47,7 +47,9 @@
             }
         },
         methods:{
-
+            ret(){
+                this.$router.push("/Login");
+            }
         }
     }
 </script>

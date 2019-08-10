@@ -1,6 +1,6 @@
 <template>
     <div class="product_app"> <!--Product.vue-->
-        <div class="goods-item" v-for="(item,i) of list" :key="i">
+        <div class="goods-item" v-for="(item,i) of list" :key="i" @click="todetail">
             <img :src="'http://127.0.0.1:3000/img/'+item.img">
             <h4>{{item.title}}</h4>
             <div class="info">
@@ -21,6 +21,9 @@
             }
         },
         methods:{
+            todetail(){
+                this.$router.push("/Detail");
+            },
             loadMore(){
                 var url="product";
                 this.pno++;
